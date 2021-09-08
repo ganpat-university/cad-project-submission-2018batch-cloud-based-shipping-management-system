@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% Class.forName("com.mysql.jdbc.Driver");
+<% Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con=DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
 String CustName=request.getParameter("empname");
 String Password=request.getParameter("emppass");
