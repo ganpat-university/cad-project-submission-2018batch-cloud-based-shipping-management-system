@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Use of html tag in jsp code</title>
+</head>
+<body>
+<center>
+<FONT SIZE="5" COLOR="#660033">Use of html tag in jsp code</FONT>
+<table bgcolor="#CFE7E7" border="1">
+<tr><td>
+<%@ page session="false" %>
+<%
+   out.println("<code>out</code> is an <b>");
+   out.println(out.getClass().getName());
+   out.println("</b> object.");
+%>
+</td></tr>
+</table>
+</center>
+<body>
+<html>
