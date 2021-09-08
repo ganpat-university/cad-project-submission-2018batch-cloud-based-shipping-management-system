@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
 <%! String driverName = "com.mysql.jdbc.Driver";%>
-<%!String url = "jdbc:mysql://127.0.01:3306/courierservice";%>
-<%!String user = "root";%>
-<%!String psw = "Khushi@212";%>
+<%!String url = "jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice";%>
+<%!String user = "admin";%>
+<%!String psw = "khushi212";%>
 <%
 String productID = request.getParameter("id");
 String pin1=request.getParameter("pincode1");

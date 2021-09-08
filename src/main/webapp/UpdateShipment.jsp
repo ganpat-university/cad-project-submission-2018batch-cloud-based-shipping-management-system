@@ -9,10 +9,10 @@
 <%
 String id = request.getParameter("productID");
 String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://127.0.01:3306/";
+String connectionUrl = "jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/";
 String database = "courierservice";
-String userid = "root";
-String password = "Khushi@212";
+String userid = "admin";
+String password = "khushi212";
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {

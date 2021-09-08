@@ -16,7 +16,7 @@
 
 
 Class.forName("com.mysql.jdbc.Driver");
-Connection con = DriverManager.getConnection("jdbc:mysql://127.0.01:3306/courierservice","root","Khushi@212");
+Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
 
 String origin = request.getParameter("pincode1");
 String destination = request.getParameter("pincode2");

@@ -23,7 +23,7 @@
 <% 
 	
 	  		Class.forName("com.mysql.cj.jdbc.Driver");	
-			Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.01:3306/courierservice","root","Khushi@212");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
 			String sql= "select * from customerdetails";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql); 
             System.out.println(preparedStatement);

@@ -167,10 +167,11 @@ a
 }
 .input-group-login
 {
-	top: 100px;
+	top: 150px;
 	position:absolute;
-	width:280px;
+	width:70%;
 	transition:.5s;
+	left:15%;
 }
 .input-group-register
 {
@@ -204,11 +205,14 @@ a
 	border-radius: 30px;
     color:white;
 }
+li
+{
+display: inline-block;
+
+}
 
 #login
 {
-top:200px;
-	left:550px;
 }
 #login input
 {
@@ -229,6 +233,8 @@ top:200px;
     color:black;
     font-size:15px;
 }
+.list{
+padding:60px;}
 h1 {
 	margin-bottom: 10px;
 	margin-top: 20px;
@@ -258,7 +264,7 @@ h1 {
         
         </div>
         
-        <div id='login-form'class='login-page'>
+        <div>
             <div class="form-box">
                 <h1> Document Shipment</h1>
 
@@ -271,16 +277,20 @@ h1 {
 
   
 <!-- <input type="text" name="producttype"  id="myText" /> -->
+<ul class="ul">
+<li class="list">
+<label><h4>Service Type :Premium<br><br>Delivery Time: 2 days<br><br>Amount : Rs. 130</h4></label>
+<input type="radio"  class='input-field' name="option" value="Premium" /></li>
+<li class="list"><label><h4>Service Type :Gold<br><br>Delivery Time: 3 days<br><br>Amount : Rs. 120</label></h4>
+<input type="radio" class='input-field' name="option" value="Gold" /></li>
 
-<input type="radio"  class='input-field' name="option" value="Premium" /><h4><label>Service Type :Premium<br><br>Delivery Time: 2 days<br><br>Amount : Rs. 130</label></h4>
-
-<input type="radio" class='input-field' name="option" value="Gold" /><h4><label>Service Type :Gold<br><br>Delivery Time: 3 days<br><br>Amount : Rs. 120</label></h4>
-
- 
-<input type="radio" class='input-field' name="option"  value="Silver" /><h4><label>Service Type :Silver<br><br>Delivery Time: 2 days<br><br>Amount : Rs. 100</label></h4>
+ <li class="list"><label><h4>Service Type :Silver<br><br>Delivery Time: 2 days<br><br>Amount : Rs. 100</label></h4>
+<input type="radio" class='input-field' name="option"  value="Silver" /></li>
+</ul>
 <br><br>
 
 <h1>PickUp Address</h1>
+
 <input type="text" class='input-field' placeholder="Enter Full Name" name="fullname" required/><br><br>
 <input type="text" class='input-field' placeholder="Enter Contact" name="con" required/><br><br>
 <input type="text"class='input-field'  placeholder="Enter Block/Flat no., Society name" name="add1" required/><br><br>
