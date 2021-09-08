@@ -192,7 +192,7 @@ a
 }
 .submit-btn
 {
-	width: 85%;
+	width: 25%;
 	padding: 10px 30px;
 	cursor: pointer;
 	display: block;
@@ -330,7 +330,7 @@ id = rs.getString("productID");
    <p> Address Line 2: <%=dadd2 %> </p>
    <p> Contact: <%=dcontact %> </p>
       <p> Payment Method: <%=Payment %> </p>
-   <button type="submit" value="Confirm" name="button1" OnClick="window.location='Website/Website/index.html'">Confirm</button>
+   <button type="submit" value="Confirm" class="submit-btn"name="button1" OnClick="window.location='Website/Website/index.html'">Confirm</button>
     </div>
         </div>
     </div>

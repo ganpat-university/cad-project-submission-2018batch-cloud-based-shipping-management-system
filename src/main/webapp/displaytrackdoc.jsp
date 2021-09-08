@@ -10,7 +10,7 @@
 
 
  </head>
- <body>
+ <body bgcolor="#EBF7FA">
  
 <% 
 Class.forName("com.mysql.cj.jdbc.Driver");
