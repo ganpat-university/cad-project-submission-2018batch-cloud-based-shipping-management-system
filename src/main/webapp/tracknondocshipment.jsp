@@ -10,7 +10,7 @@
             <div class="form-box">
                 <h1>Track Document Shipment</h1>
             
-            <form id='login' class='input-group-register'ACTION="displaytrackdoc.jsp" METHOD="POST">
+            <form id='login' class='input-group-register'ACTION="displaytracknondoc.jsp" METHOD="POST">
              <br><br><br>
             Please enter the Reference Code :
             <BR>

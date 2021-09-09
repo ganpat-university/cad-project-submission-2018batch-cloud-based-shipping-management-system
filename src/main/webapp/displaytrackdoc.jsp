@@ -8,7 +8,27 @@
 <meta charset="ISO-8859-1">
 <title></title>
 
+<style>
 
+{
+   
+}
+
+.submit-btn
+{
+	width: 25%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: rgb(51,83,130);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    color:white;
+}
+
+</style>
  </head>
  <body bgcolor="#EBF7FA">
  
@@ -96,7 +116,7 @@ id = rs.getString("productID");
    <p> Address Line 2: <%=dadd2 %> </p>
    <p> Contact: <%=dcontact %> </p>
       <p> Payment Method: <%=Payment %> </p>
-   <button type="submit" value="Confirm" name="button1" OnClick="window.location='Website/Website/index.html'">Go back</button>
+   <button type="submit" class="submit-btn" value="Confirm" name="button1" OnClick="window.location='Website/Website/index.html'">Go back</button>
    
       
    

@@ -194,7 +194,7 @@ a
 }
 .submit-btn
 {
-	width: 85%;
+	width: 25%;
 	padding: 10px 30px;
 	cursor: pointer;
 	display: block;
@@ -252,6 +252,8 @@ h1 {
             <nav>
                 <ul id='MenuItems'>
                     <li><a href="Website/Website/index.html">Home</a></li>
+                    <li><a href="trackpopup.jsp">Track Shipment</a></li>
+                    
                   
 
                     </ul>

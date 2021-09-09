@@ -251,13 +251,10 @@ h1 {
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>New Delivery</a></li>
-                    <li><a href='#'>Track Order</a></li>
-                    <li><a href='#'>Admin</a></li>
-                    <li><a href='#'>Employee</a></li>
-                    <li><a href='#'>Terms & Conditions</a></li>
-                    <li><a href="CustomerLogin.html">Log In</a></li>
+                    <li><a href='Website/Website/index.html'>Home</a></li>
+                    <li><a href="trackpopup.jsp">Track Shipment</a></li>
+                    
+                   
 
                     </ul>
             </nav>

@@ -49,3 +49,4 @@ out.println(sql);
 }
 }
 %>
+   <button type="submit" class="submit-btn" value="Confirm" name="button1" OnClick="window.location='Website/Website/index.html'">Go back</button>
