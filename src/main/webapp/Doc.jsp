@@ -252,12 +252,7 @@ h1 {
             <nav>
                 <ul id='MenuItems'>
                     <li><a href="Website/Website/index.html">Home</a></li>
-                    <li><a href='#'>New Delivery</a></li>
-                    <li><a href='#'>Track Order</a></li>
-                    <li><a href='#'>Admin</a></li>
-                    <li><a href='#'>Employee</a></li>
-                    <li><a href='#'>Terms & Conditions</a></li>
-                    <li><a href="CustomerLogin.html">Log In</a></li>
+                  
 
                     </ul>
             </nav>

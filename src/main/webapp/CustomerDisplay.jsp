@@ -8,7 +8,20 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
+ <div class="full-page">
+        <div class="navbar">
+            <div class="cname">
+                <b><a href='index.html'>Sprightly Go</a></b>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                  
 
+                    </ul>
+            </nav>
+        
+        </div>
 <table BORDER="1">
      <tr>
      <th>Customer ID</th>
