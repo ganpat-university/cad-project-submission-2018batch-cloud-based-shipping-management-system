@@ -2,16 +2,22 @@
     pageEncoding="ISO-8859-1"%>
 <HTML>
     <HEAD>
+     <link rel="stylesheet" href="Website/Website/css/main.css">
         <TITLE>Database Lookup</TITLE>
     </HEAD>
  
-    <BODY>
-        <FORM ACTION="displaytracknondoc.jsp" METHOD="POST">
+     <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <h1>Track Document Shipment</h1>
+            
+            <form id='login' class='input-group-register'ACTION="displaytrackdoc.jsp" METHOD="POST">
+             <br><br><br>
             Please enter the Reference Code :
             <BR>
-            <INPUT TYPE="TEXT" NAME="id">
+            <INPUT class='input-field'TYPE="TEXT" NAME="id">
             <BR>
-            <INPUT TYPE="SUBMIT" value="Submit">
+            <INPUT class='submit-btn' style="color:white;" TYPE="SUBMIT" value="Submit">
         </FORM>
+        </div></div>
     </BODY>
 <HTML>
