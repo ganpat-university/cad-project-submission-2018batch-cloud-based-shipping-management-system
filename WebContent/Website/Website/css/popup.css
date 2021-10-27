@@ -1,0 +1,146 @@
+@charset "ISO-8859-1";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(51,83,130);
+}
+.cname
+{
+	font-family:'Lucida Sans';
+	font-style:oblique;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 50px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 18px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color:#C2EDCE;
+}
+nav ul li a:hover
+{
+    color:#C2EDCE;
+}
+a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 28px;
+}
+
+a:hover
+{
+	color:#C2EDCE;
+}
+#login-form
+{
+    
+}
+.form-box
+{
+    width:380px;
+	height:330px;
+	position:relative;
+	margin:2% auto;
+	background:rgb(235, 247, 250);
+	padding:20px;
+    overflow: hidden;
+    padding-top: 3px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 2px;
+}
+.button-box
+{
+	width:220px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.178);
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding:10px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+    color:white;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgb(51,83,130);
+	border-radius: 30px;
+	transition: .5s;
+    color:white;
+	text-align: center;
+}
+b
+{	
+	margin-bottom: 10px;
+	margin-top: 20px;
+	width: 80%;
+	text-align: center;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: rgb(51,83,130);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    color:white;
+}

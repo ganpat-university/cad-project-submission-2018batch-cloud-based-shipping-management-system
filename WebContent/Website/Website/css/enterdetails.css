@@ -1,0 +1,247 @@
+@charset "ISO-8859-1";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.full-page
+{
+    height: 90%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(51,83,130);
+}
+.cname
+{
+	font-family:'Lucida Sans';
+	font-style:oblique;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+    padding:0;
+    margin:0;
+    float: right;
+    margin-right:30px;
+}
+nav ul li
+{
+    display: inline-block;
+    background:rgb(51,83,130) ;
+    list-style:none;
+    position: relative;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif;
+    display: block;
+    line-height:30px;
+    padding:0 15px;
+}
+nav ul li button
+{
+    font-size: 18px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color:#C2EDCE;
+}
+nav ul li a:hover
+{
+    display:block;
+    color:#C2EDCE;
+}
+nav ul ul
+{
+	position: absolute;
+	top:30px;
+	display:none;
+}
+nav ul li:hover > ul
+{
+	display:block;
+}
+nav ul ul li
+{
+	width:150px;
+	float :none;
+	display: list-item;
+	position:relative;
+}
+a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 28px;
+   font-family:'Lucida Sans';
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.form-box
+{
+	position:relative;
+	background:rgb(235, 247, 250);
+	padding-top:5px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:0px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 2px;
+	margin:auto;
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+form .user-details .input-box{
+  margin-bottom: 12px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box select{
+  height: 45px;
+  width: 200%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #335382;
+}
+.user-details .input-box select:focus,
+.user-details .input-box select:valid{
+  border-color: #335382;
+}
+ form .pay-details .pay-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #335382;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+  form select[type="radio"]{
+   display: none;
+ }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+.submit-btn
+{
+	width: 25%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: rgb(51,83,130);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    color:white;  
+}
+.he
+{
+	font-size:20px;
+}
+.wel
+{
+	color: white;
+	font-style:oblique;
+	font-size:20px;
+}

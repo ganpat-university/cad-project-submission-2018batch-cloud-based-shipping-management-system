@@ -1,0 +1,89 @@
+@charset "ISO-8859-1";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(51,83,130);
+}
+.cname
+{
+	font-family:'Lucida Sans';
+	font-style:oblique;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 50px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 18px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color:#C2EDCE;
+}
+nav ul li a:hover
+{
+    color:#C2EDCE;
+}
+a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 28px;
+}
+.a1
+{
+    text-decoration: none;
+    color: rgb(51,83,130);
+    font-size: 15px;
+}
+.msg
+{
+	font-size: 40px; 
+	padding-top: 110px;
+	font-family: 'Lucida Sans';
+}
