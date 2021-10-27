@@ -209,7 +209,7 @@ try {
             <nav>
                 <ul id='MenuItems'>
                     <li><a href="trackpopup.jsp">Track Shipment</a></li>
-                    <li><a href='#'>Terms & Conditions</a></li>
+                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
                     <li><a href="Website/Website/index.html">Home</a></li>
               		<li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li>
                 </ul>
