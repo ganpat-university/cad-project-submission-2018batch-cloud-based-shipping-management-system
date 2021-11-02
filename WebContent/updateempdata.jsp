@@ -55,7 +55,7 @@ body {
                    		<ul class="sub">
                    			<li><a href="showemployee.jsp">Display Employee</a></li>
                 			<li><a href="EmployeeRegistration.html">Add Employee</a></li>
-                			<li><a href="updateemp.jsp">Update Employee</a></li>
+                		
                 			<li><a href="empdelete.jsp">Remove Employee</a></li>
                 		</ul>
                 	</li>

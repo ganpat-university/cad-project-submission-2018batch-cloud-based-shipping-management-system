@@ -145,7 +145,7 @@ padding-top:15px;
                 	<li><a href="#">Shipment</a>
                 		<ul class="sub1">
                 			<li><a href="ShowDocShipment.jsp">Document Shipment</a></li>
-                			<li><a href="ShwNondocShipment.jsp">Non Document Shipment</a></li>
+                		
                 		</ul>
                 	</li>
                     <li><a href="ShowCustomer.jsp">Customer Details</a></li>
