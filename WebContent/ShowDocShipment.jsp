@@ -158,6 +158,8 @@ padding-top:15px;
                 		</ul>
                 	</li>
                     <li><a href="Website/Website/index.html">Home</a></li>
+                     <li class="wel"><% String username=session.getAttribute("username").toString(); %>
+<%=username%></li>
                 </ul>
             </nav>
         
