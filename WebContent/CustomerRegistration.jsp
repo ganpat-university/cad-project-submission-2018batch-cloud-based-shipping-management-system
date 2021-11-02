@@ -12,7 +12,7 @@
 
 <%
 Class.forName("com.mysql.cj.jdbc.Driver");
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/courierservice","root","root");
+Connection con = DriverManager.getConnection("jdbc:mysql://aa18z31k7yvz1lk.cttgxradede3.ap-south-1.rds.amazonaws.com:3306/courierservice","project","cadproject");
 
 String username = request.getParameter("username");
 String password = request.getParameter("pass");
