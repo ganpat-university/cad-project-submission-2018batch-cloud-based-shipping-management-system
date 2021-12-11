@@ -93,7 +93,7 @@ font-size:25px;
          
                     <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
                         <li><a href="Website/Website/index.html">Home</a></li>
-        <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li>        
+        <li class="wel"><% String username=session.getAttribute("uname").toString();%><%=username%></li>        
                 </ul>
             </nav>
         
