@@ -28,9 +28,7 @@ ResultSet resultSet = null;
 <title>Sprightly Go</title>
     <link rel="stylesheet" href="Website/Website/css/view.css" >
 <style>
-body {
-  overflow: hidden; /* Hide scrollbars */
-}
+
 table {
   font-family: sans-serif;
   text-decoration: none;
@@ -128,35 +126,48 @@ text-align: middle;
   
   cursor: pointer;
 }
-.wel
+h1
 {
-	color: white;
-	font-style:oblique;
-	font-size:20px;
+	display: inline-block;
+  font-family: sans-serif;
+padding-top:15px;
 }
 </style>
 </head>
 <body>
 <div class="full-page">
-         <div class="navbar">
+        <div class="navbar">
             <div class="cname">
-                <a href="index.html">Sprightly Go</a>
+                <a href='index.html'>Sprightly Go</a>
             </div>
-        
-            <nav>
+         <nav>
                 <ul id='MenuItems'>
-                   
-                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
-                        <li><a href="Website/Website/index.html">Home</a></li>
-                <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li> 
+                	<li><a href="#">Shipment</a>
+                		<ul class="sub1">
+                			
+                			<li><a href="ShwNondocShipment.jsp">Non Document Shipment</a></li>
+                		</ul>
+                	</li>
+                    <li><a href="ShowCustomer.jsp">Customer Details</a></li>
+                    <li><a href="#">Employee</a>
+                   		<ul class="sub">
+                   			<li><a href="showemployee.jsp">Display Employee</a></li>
+                			<li><a href="EmployeeRegistration.html">Add Employee</a></li>
+                			<li><a href="updateemp.jsp">Update Employee</a></li>
+                			<li><a href="empdelete.jsp">Remove Employee</a></li>
+                		</ul>
+                	</li>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                     <li class="wel"><% String username=session.getAttribute("adminname").toString(); %>
+<%=username%></li>
                 </ul>
             </nav>
         
         </div>
 <center>
-<h1>NonDocument Shipment</h1>
+<h1>Document Shipment</h1>
 <table border="1">
-<tr style="background-color: rgb(51,83,130);;color:white;">
+<tr style="background-color: rgb(51,83,130);color:white;font-style:Serif">
 <th>Reference Code</th>
 <th>Amount Paid</th>
 <th>Origin Pincode</th>
@@ -165,12 +176,10 @@ text-align: middle;
 <th>Delivery Time</th>
 <th>Amount</th>
 <th>Status</th>
-<th>Product Name</th>
 <th>Registered Date</th>
 <th>Delivery Date</th>
 <th>Shipment Type</th>
 <th>Username</th>
-<th></th>
 
 
 </tr>
@@ -178,7 +187,7 @@ text-align: middle;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select productID,amountpaid,pincode1,pincode2,servicetype,deliverytime,amount,status,productname,registerdate,deliverydate,shipmenttype,username from nondocument";
+String sql ="select productID,amountpaid,pincode1,pincode2,servicetype,deliverytime,amount,status,registerdate,deliverydate,shipmenttype,username from productdetails";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -191,20 +200,11 @@ while(resultSet.next()){
 <td><%=resultSet.getString("deliverytime") %></td>
 <td><%=resultSet.getString("amount") %></td>
 <td><%=resultSet.getString("status") %></td>
-<td><%=resultSet.getString("productname") %></td>
 <td><%=resultSet.getString("registerdate") %></td>
 <td><%=resultSet.getString("deliverydate") %></td>
 <td><%=resultSet.getString("shipmenttype") %></td>
 <td><%=resultSet.getString("username") %></td>
 
-
-
-
-
-
-
-
-<td><a class="link" href="updatedata.jsp?id=<%=resultSet.getString("productid")%>">Update</a></td>
 </tr>
 <%
 }
@@ -213,5 +213,5 @@ connection.close();
 e.printStackTrace();
 }
 %>
-</table></center></div>
+</table></center>
 </body>

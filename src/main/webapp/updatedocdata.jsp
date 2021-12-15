@@ -5,10 +5,10 @@
 <%
 String id = request.getParameter("id");
 String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/";
-String database = "courierservice";
-String userid = "admin";
-String password = "khushi212";
+String connectionUrl = "jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/";
+String database = "userdb";
+String userid = "root";
+String password = "rootroot";
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
@@ -22,17 +22,42 @@ ResultSet resultSet = null;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select productID,amountpaid,pincode1,pincode2,servicetype,amount,status from productdetails where productID="+id;
+String sql ="select productID,username,amountpaid,pincode1,pincode2,servicetype,amount,status from productdetails where productID="+id;
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="Website/Website/css/main.css">
+<title>Sprightly Go</title>
+<link rel="stylesheet" href="Website/Website/css/updatedata.css" >
+<style>
+.wel
+{
+	color: white;
+	font-style:oblique;
+	font-size:20px;
+}
+</style>
 </head>
 <body>
-<div class="full-page">
+ <div class="full-page">
+         <div class="navbar">
+            <div class="cname">
+                <a href="index.html">Sprightly Go</a>
+            </div>
+        
+            <nav>
+                <ul id='MenuItems'>
+                  
+                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
+                        <li><a href="Website/Website/index.html">Home</a></li>
+                        <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li> 
+        
+                </ul>
+            </nav>
+        
+        </div>
  <div id='login-form'class='login-page'>
             <div class="form-box">
 <h1>Update Document Shipment</h1>
@@ -40,6 +65,8 @@ while(resultSet.next()){
 Reference Code:
 <input  class='input-field' type="hidden" name="id" value="<%=resultSet.getString("productID") %>">
 <input  class='input-field' type="text" name="id" value="<%=resultSet.getString("productID") %>">
+Username:
+<input  class='input-field' type="text" name="usr" value="<%=resultSet.getString("username") %>">
 <br>
 Origin Pincode<br>
 <input class='input-field' type="text" name="pincode1" value="<%=resultSet.getString("pincode1") %>">

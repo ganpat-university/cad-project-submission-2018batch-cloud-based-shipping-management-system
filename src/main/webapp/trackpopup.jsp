@@ -3,18 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="Website/Website/css/track.css" >
+  <title>Sprightly Go</title>
 <style>
 body {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  overflow: hidden; /* Hide scrollbars */
 }
-
+.container
+{
+	align-items: center;
+    justify-content: center;
+	padding-left:35%;
+	float:left;
+	display:flex;
+	margin:0 auto;
+	height:70%;
+	padding-top:83px;
+	font-family:Lucida Sans;
+}
 .cookiesContent {
   width: 320px;
   display: flex;
@@ -25,6 +31,7 @@ body {
   text-align: center;
   border-radius: 20px;
   padding: 30px 30px 70px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   button.close {
     width: 30px;
@@ -52,24 +59,54 @@ body {
     border-radius: 5px;
     width: 200px;
     padding: 14px;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     box-shadow: 0px 6px 18px -5px  rgb(51,83,130);
     text-decoration: none;
   }
-
+  .accept:hover{
+  color:#C2EDCE;
+  }
+b{
+padding-right:10px;
+padding-left:10px;
+font-size:25px;
+}
+.wel
+{
+	color: white;
+	font-style:oblique;
+	font-size:20px;
+	
+}
 </style>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
 
 <body>
+<div class="full-page">
+    <div class="navbar">
+		<div class="cname">
+            <a href="Website/Website/index.html">Sprightly Go</a>
+        </div>
+        <nav>
+            <ul id='MenuItems'>
+                    <li><a href="trackpopup.jsp">Track Shipment</a></li>
+                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                    <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li>        
+            </ul>
+        </nav>
+    </div>
+<center>
 <div class="container">
   <div class="cookiesContent" id="cookiesPopup">
-   <a href="Website/Website/index.html"> <button class="close">X</button></a>
-   <h1>What type of Shipment you want?</h1>
-   <a href="trackdocshipment.jsp" class="accept" type="button">Document</a><br><br>
-   <a href="tracknondocshipment.jsp" class="accept" type="button">Non Document</a>
-    
+	<b>Which type of Shipment you want to Track?</b><br>
+	<a href="trackdocshipment.jsp" class="accept" type="button">Document</a><br><br>
+	<a href="tracknondocshipment.jsp" class="accept" type="button">Non Document</a>
   </div>
 </div>
-</body></html>
+</center>
+</div>
+</body>
+</html>

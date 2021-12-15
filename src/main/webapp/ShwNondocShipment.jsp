@@ -28,9 +28,7 @@ ResultSet resultSet = null;
 <title>Sprightly Go</title>
     <link rel="stylesheet" href="Website/Website/css/view.css" >
 <style>
-body {
-  overflow: hidden; /* Hide scrollbars */
-}
+
 table {
   font-family: sans-serif;
   text-decoration: none;
@@ -128,32 +126,45 @@ text-align: middle;
   
   cursor: pointer;
 }
-.wel
+h1
 {
-	color: white;
-	font-style:oblique;
-	font-size:20px;
+	display: inline-block;
+  font-family: sans-serif;
+padding-top:15px;
 }
 </style>
 </head>
 <body>
 <div class="full-page">
-         <div class="navbar">
+        <div class="navbar">
             <div class="cname">
-                <a href="index.html">Sprightly Go</a>
+                <a href='index.html'>Sprightly Go</a>
             </div>
-        
-            <nav>
+         <nav>
                 <ul id='MenuItems'>
-                   
-                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
-                        <li><a href="Website/Website/index.html">Home</a></li>
-                <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li> 
+                	<li><a href="#">Shipment</a>
+                		<ul class="sub1">
+                			<li><a href="ShowDocShipment.jsp">Document Shipment</a></li>
+                		
+                		</ul>
+                	</li>
+                    <li><a href="ShowCustomer.jsp">Customer Details</a></li>
+                    <li><a href="#">Employee</a>
+                   		<ul class="sub">
+                   			<li><a href="showemployee.jsp">Display Employee</a></li>
+                			<li><a href="EmployeeRegistration.html">Add Employee</a></li>
+                			<li><a href="updateemp.jsp">Update Employee</a></li>
+                			<li><a href="empdelete.jsp">Remove Employee</a></li>
+                		</ul>
+                	</li>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                     <li class="wel"><% String username=session.getAttribute("adminname").toString(); %>
+<%=username%></li>
                 </ul>
             </nav>
         
         </div>
-<center>
+        <center>
 <h1>NonDocument Shipment</h1>
 <table border="1">
 <tr style="background-color: rgb(51,83,130);;color:white;">
@@ -170,7 +181,6 @@ text-align: middle;
 <th>Delivery Date</th>
 <th>Shipment Type</th>
 <th>Username</th>
-<th></th>
 
 
 </tr>
@@ -204,7 +214,6 @@ while(resultSet.next()){
 
 
 
-<td><a class="link" href="updatedata.jsp?id=<%=resultSet.getString("productid")%>">Update</a></td>
 </tr>
 <%
 }
@@ -213,5 +222,5 @@ connection.close();
 e.printStackTrace();
 }
 %>
-</table></center></div>
+</table></center>
 </body>

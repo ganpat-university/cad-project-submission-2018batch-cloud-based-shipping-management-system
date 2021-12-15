@@ -5,269 +5,30 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<style>
-*
-{
-   
-}
-.full-page
-{
-    height: 100%;
-	width: 100%;
-	background-position: center;
-	background-size: cover;
-	position: absolute;
-}
-.navbar
-{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 0;
-    padding-top: 30px;
-    background-color: rgb(51,83,130);
-}
-.cname
-{
-	font-family:'Lucida Sans';
-	font-style:oblique;
-}
-nav
-{
-    flex: 1;
-    text-align: right;
-}
-nav ul 
-{
-    display: inline-block;
-    list-style: none;
-}
-nav ul li
-{
-    display: inline-block;
-    margin-right: 50px;
-}
-nav ul li a
-{
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    font-family: sans-serif;
-}
-nav ul li button
-{
-    font-size: 18px;
-    color: white;
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-family: sans-serif;
-}
-nav ul li button:hover
-{
-    color:#C2EDCE;
-}
-nav ul li a:hover
-{
-    color:#C2EDCE;
-}
-a
-{
-    text-decoration: none;
-    color:white;
-    font-size: 28px;
-}
-.a1
-{
-    text-decoration: none;
-    color: rgb(51,83,130);
-    font-size: 20px;
-}
-#col .col1
-{
-    float:left;
-	width: 30%;
-	padding-top: 40px;
-	padding-left: 10px;
-}
-#col .col2
-{
-	font-size: 22px; 
-	font-style: oblique;
-	float:right;
-	width: 70%;
-	padding-top: 200px;
-	padding-left:30px;
-	padding-right:20px;
-	color:rgb(51,83,130);
-	font-family: 'Lucida Sans';
-}
-.tet
-{
-	font-size:35px ;
-	font-family: 'Lucida Sans';
-	padding-left: 30px;
-	padding-right:10px;
-	font-style: oblique;
-}
-.row:after
-{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-.form-box
-{
-    width:100%;
-	height:2000px;
-	position:relative;
-	margin:2% auto;
-	background:rgb(235, 247, 250);
-	padding:20px;
-    overflow: hidden;
-    padding-top: 3px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	border-radius: 2px;
-}
-.button-box
-{
-	width:220px;
-	margin:35px auto;
-	position:relative;
-	box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.178);
-	border-radius: 30px;
-}
-.toggle-btn
-{
-	padding:10px 30px;
-	cursor:pointer;
-	background:transparent;
-	border:0;
-	outline: none;
-	position: relative;
-    color:white;
-}
-#btn
-{
-	top: 0;
-	left:0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: rgb(51,83,130);
-	border-radius: 30px;
-	transition: .5s;
-    color:white;
-	text-align: center;
-}
-.input-group-login
-{
-	top: 150px;
-	position:absolute;
-	width:70%;
-	transition:.5s;
-	left:15%;
-}
-.input-group-register
-{
-    top: 90px;
-	position:absolute;
-	width:280px;
-	transition:.5s;
-}
-.input-field
-{
-	width: 100%;
-	padding:10px 0;
-	margin:5px 0;
-	border-left:0;
-	border-top:0;
-	border-right:0;
-	border-bottom: 1px solid #999;
-	outline:none;
-	background: transparent;
-}
-.submit-btn
-{
-	width: 85%;
-	padding: 10px 30px;
-	cursor: pointer;
-	display: block;
-	margin: auto;
-	background: rgb(51,83,130);
-	border: 0;
-	outline: none;
-	border-radius: 30px;
-    color:white;
-}
-li
-{
-display: inline-block;
-
-}
-
-#login
-{
-}
-#login input
-{
-	color:black;
-	font-size:18;
-}
-#register
-{
-	left:450px;
-}
-#register input
-{
-	color:black;
-	font-size: 18;
-}
-.switch
-{
-    color:black;
-    font-size:15px;
-}
-.list{
-padding:60px;}
-h1 {
-	margin-bottom: 10px;
-	margin-top: 20px;
-	font-weight: normal;
-	text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}</style>
+<title>Sprightlg Go</title>
+<link rel="stylesheet" href="Website/Website/css/enterdetails.css" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="full-page">
         <div class="navbar">
             <div class="cname">
-                <b><a href='index.html'>Sprightly Go</a></b>
+                <a href='Website/Website/index.html'>Sprightly Go</a>
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li><a href='Website/Website/index.html'>Home</a></li>
                     <li><a href="trackpopup.jsp">Track Shipment</a></li>
-                    
-                   
-
-                    </ul>
+                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+              		<li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li>
+                </ul>
             </nav>
-        
         </div>
         
         <div id='login-form'class='login-page'>
             <div class="form-box">
-                <h1>Non Document Shipment</h1>
-
-<% String username=session.getAttribute("uname").toString(); %>
-
-<h1>welcome <%=username%></h1>
+                 <h3><center>Non Document Shipment</center></h3>
+<!-- 
 <form id='login' class='input-group-login' action ="NonDocument.jsp" method="post">
 <input type="text" class='input-field' placeholder="Enter Origin Pincode" name="pincode1" required/><br><br>
 <input type="text" class='input-field' placeholder="Enter Destination Pincode" name="pincode2" required/><br><br>
@@ -287,7 +48,6 @@ h1 {
 <option value="Covers">Covers</option>
 <option value="Box">Box</option>
 <option value="Chocolates">Chocolates</option>
-<option value="Covers">Covers</option>
 <option value="Charger">Charger</option>
 <option value="Computer Parts">Computer Parts</option>
 <option value="Dry Fruits">Dry Fruits</option>
@@ -295,17 +55,11 @@ h1 {
 <option value="Electronics">Electronics</option>
 <option value="Food">Food</option>
 <option value="Home Appliaces">Home Appliances</option>
-<!-- <option onClick="myFunction()">Others</option> -->
-
-
-
-
-
- </select>
-    
+<!-- <option onClick="myFunction()">Others</option>-->
+ <!--</select>-->
 <!-- <input type="text" name="producttype"  id="myText" /> -->
 
-
+<!-- 
 <ul class="ul">
 <li class="list">
 <label><h4>Service Type :Premium<br><br>Delivery Time: 2 days<br><br>Amount : Rs. 250</h4></label>
@@ -333,16 +87,100 @@ h1 {
 <input type="text" class='input-field' placeholder="Enter area name" name="dadd2" required/><br><br>
 
  <button type="submit" name="display" class='submit-btn' value='Submit'>Submit</button><br>
+ -->
 
-
-
-
-
-
-</form>
-  </div>
+ <div class="content">
+        <form action="NonDocument.jsp" method="post">
+        <div class="user-details">
+        	<div class="input-box">
+        		<span class="details"><center class="he">Sender's Details</center>Origin Pincode</span>
+   				<input type="text" class='input-field' placeholder="Enter Origin Pincode" name="pincode1" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details"><center class="he">Reciver's Details</center>Destination Pincode</span>
+   				<input type="text" class='input-field' placeholder="Enter Destination Pincode" name="pincode2" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details">Name</span>
+   				<input type="text" class='input-field' placeholder="Enter Name" name="fullname" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details">Reciver's Name</span>
+   				<input type="text" class='input-field' placeholder="Enter Name" name="dfullname" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details">Contact No</span>
+   				<input type="text" class='input-field' placeholder="Enter Contact" name="con" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details">Reciver's Contact No</span>
+   				<input type="text"  class='input-field'placeholder="Enter Contact" name="dcon" required/>
+   			</div>
+   			<div class="input-box">
+        		<span class="details">Address</span>
+   				<input type="text"class='input-field'  placeholder="Enter Block/Flat no., Society name" name="add1" required/>
+   				<input type="text" class='input-field' placeholder="Enter Area Name" name="add2" required/>
+   			</div>
+   		
+   			<div class="input-box">
+        		<span class="details">Reciver's Address</span>
+   				<input type="text"  class='input-field'placeholder="Enter Block/Flat no., Society name" name="dadd1" required/>
+				<input type="text" class='input-field' placeholder="Enter Area Name" name="dadd2" required/>
+   			</div>
+   			<div class="input-box">
+   				<span class="details">Product Type</span>
+   				 <select class='input-field' name="producttype" onchange='Checkproduct(this.value);' onClick="size='8'" > 
+   				 <option>Select Product Type You Want to deliver</option>
+  
+<option value="Clothing">Clothing</option>
+<option value="Cameras">Cameras</option>
+<option value="Phones">Phones</option>
+<option value="DVDs">DVDs</option>
+<option value="Fabric">Fabric</option>
+<option value="Shoes">Shoes</option>
+<option value="Auto Parts">Auto Parts</option>
+<option value="Bags">Bags</option>
+<option value="Books">Books</option>
+<option value="Covers">Covers</option>
+<option value="Box">Box</option>
+<option value="Chocolates">Chocolates</option>
+<option value="Charger">Charger</option>
+<option value="Computer Parts">Computer Parts</option>
+<option value="Dry Fruits">Dry Fruits</option>
+<option value="Earphones">Earphones</option>
+<option value="Electronics">Electronics</option>
+<option value="Food">Food</option>
+<option value="Home Appliaces">Home Appliances</option>
+</select>
+   			</div>
+   			</div>
+   			<div class="pay-details">
+   				<input type="radio" name="option" value="Premium" id="dot-1">
+          		<input type="radio" name="option" value="Gold"id="dot-2">
+          		<input type="radio" name="option" value="Silver" id="dot-3">
+   				<span class="pay-title">Service Type</span>
+   				<div class="category">
+   					<label for="dot-1">
+   					<span class="dot one"></span>
+   					<span class="pay">Platinum<br>Delivery Time: 2 days<br>Amount : Rs. 130</span>
+   					</label>	
+   					<label for="dot-2">
+   					<span class="dot two"></span>
+   					<span class="pay">Gold<br>Delivery Time: 3 days<br>Amount : Rs. 120</span>
+   					</label>
+   					<label for="dot-3">
+   					<span class="dot three"></span>
+   					<span class="pay">Silver<br>Delivery Time: 2 days<br>Amount : Rs. 100</span>
+   					</label>
+   				</div>
+   			</div>
+   			<div>
+   				<button type="submit" name="display" class="submit-btn" value='Submit'>Submit</button><br>
+        </div>
+        </form>
         </div>
     </div>
-
+</div>
+</div>
 </body>
 </html>

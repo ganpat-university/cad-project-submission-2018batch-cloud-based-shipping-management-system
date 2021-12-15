@@ -9,10 +9,10 @@
 <%
 String id = request.getParameter("productID");
 String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/";
-String database = "courierservice";
-String userid = "admin";
-String password = "khushi212";
+String connectionUrl = "jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/";
+String database = "userdb";
+String userid = "root";
+String password = "rootroot";
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
@@ -24,22 +24,30 @@ ResultSet resultSet = null;
 %>
 <html>
 <head>
+<meta charset="ISO-8859-1">
+<title>Sprightly Go</title>
+    <link rel="stylesheet" href="Website/Website/css/view.css" >
 <style>
-body {
-  padding:1.5em;
-  background: #f5f5f5
-}
-
 table {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 18px;
   border: 1px #a39485 solid;
-  font-size: .9em;
   box-shadow: 0 2px 5px rgba(0,0,0,.25);
-  width: 100%;
+  width:80%;
   border-collapse: collapse;
   border-radius: 5px;
   overflow: hidden;
+  margin-top:20px;
+  background: rgb(51,83,130);
 }
-
+tr
+{
+	
+	padding:1.5em;
+  background: rgb(51,83,130);
+ 
+}
 th {
   text-align: middle;
 }
@@ -67,12 +75,9 @@ thead {
     
   table, thead, tbody, th, td, tr {
     display: block;
-     text-align: right;
+     text-align: middle;
   }
   
-  th {
-    text-align: right;
-  }
   
   table {
     position: relative; 
@@ -93,11 +98,6 @@ thead {
     white-space: nowrap;
   }
   
-  tr {
-    display: inline-block;
-    vertical-align: top;
-    color:white;
-  }
   
   th {
     border-bottom: 1px solid #a39485;
@@ -105,13 +105,15 @@ thead {
   
   td {
     border-bottom: 1px solid #e5e5e5;
-text-align: middle;
+text-align: center;
   }
  
-  
+  tr{
+  background-color:blue;
+  }
   
   }
-   a {
+   .link {
   background-color:#FF5733;
   border: none;
   color: white;
@@ -122,8 +124,33 @@ text-align: middle;
   font-size: 16px;
   
   cursor: pointer;
-}</style></head>
+}
+.wel
+{
+	color: white;
+	font-style:oblique;
+	font-size:20px;
+}
+</style>
+</head>
 <body>
+ <div class="full-page">
+         <div class="navbar">
+            <div class="cname">
+                <a href="index.html">Sprightly Go</a>
+            </div>
+        
+            <nav>
+                <ul id='MenuItems'>
+                  
+                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
+                        <li><a href="Website/Website/index.html">Home</a></li>
+         <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li> 
+                </ul>
+            </nav>
+        
+        </div>
+<center>
 <h1>Document Shipment</h1>
 <table border="1">
 <tr style="background-color: rgb(51,83,130);color:white;font-style:Serif">
@@ -172,7 +199,7 @@ while(resultSet.next()){
 
 
 
-<td><a href="updatedocdata.jsp?id=<%=resultSet.getString("productid")%>">update</a></td>
+<td><a class="link" href="updatedocdata.jsp?id=<%=resultSet.getString("productid")%>">Update</a></td>
 </tr>
 <%
 }
@@ -181,5 +208,5 @@ connection.close();
 e.printStackTrace();
 }
 %>
-</table>
+</table></center></div>
 </body>

@@ -31,11 +31,11 @@ ResultSet rs = null;
 
 String driverName = "com.mysql.cj.jdbc.Driver";
 
-String url = "jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com/courierservice";
+String url = "jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/userdb";
 
-String user = "admin";
+String user = "root";
 
-String dbpsw = "khushi212";
+String dbpsw = "rootroot";
 
 
 

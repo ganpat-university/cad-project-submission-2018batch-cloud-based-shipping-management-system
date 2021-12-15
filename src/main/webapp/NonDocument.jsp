@@ -7,16 +7,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sprightly Go</title>
+<link rel="stylesheet" href="Website/Website/css/view.css" >
 </head>
 <body>
-
-
 <%
-
-
 Class.forName("com.mysql.jdbc.Driver");
-Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
+Connection con = DriverManager.getConnection("jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/userdb","root","rootroot");
 
 String origin = request.getParameter("pincode1");
 String destination = request.getParameter("pincode2");
@@ -77,9 +74,6 @@ if (service.equals("Premium"))
 	   c.setTime(sdf.parse(date));
 		c.add(Calendar.DAY_OF_MONTH, num);  
 		String deldate = sdf.format(c.getTime());  
-
-
-
 	String Shipment = "Non Document";
 	String sql2 = "insert into nondocument(amountpaid,pincode1,pincode2,servicetype,deliverytime,amount,status,productname,registerdate,deliverydate,shipmenttype,username,fullname,add1,add2,contact1,dfullname,dadd1,dadd2,contact2,payment) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	PreparedStatement ptrm = con.prepareStatement(sql2);
@@ -91,7 +85,6 @@ if (service.equals("Premium"))
 	ptrm.setString(6 , amount);
 	ptrm.setString(7, status);
 	ptrm.setString(8,producttype);
-
 	ptrm.setString(9, date);
 	ptrm.setString(10, deldate);
 	ptrm.setString(11, Shipment);
@@ -105,29 +98,9 @@ if (service.equals("Premium"))
 	ptrm.setString(19, dadd2);
 	ptrm.setString(20, dcontact);
 	ptrm.setString(21, Payment);
-
-
-
-
-
-
-	
-
-	
 	ptrm.executeUpdate();
-	session.setAttribute("username", request.getParameter("uname"));
-	RequestDispatcher rd = request.getRequestDispatcher("/nondocdisplay.jsp");
-	rd.forward(request, response);
-	  
+	response.sendRedirect("nondocdisplay.jsp");
 	%>
-
-	
-
-	   
-
-	
-
-
 
 </body>
 </html>

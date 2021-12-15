@@ -1,22 +1,27 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sprightly Go</title>
-    <link rel="stylesheet" href="Website/Website/css/main.css">
+    <link rel="stylesheet" href="Website/Website/css/log.css">
 </head>
 <body>
     <div class="full-page">
          <div class="navbar">
             <div class="cname">
-                <b><a href="Website/Website/index.html">Sprightly Go</a></b>
+                <a href="Website/Website/index.html">Sprightly Go</a>
             </div>
            
-        
+        <nav>
+                <ul id='MenuItems'>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                </ul>
+            </nav>
         </div>
         
         <div id='login-form'class='login-page'>
-            <div class="form-box">
-                <h1>Login</h1>
+            <div class="form-box"><br>
+                <b>Employee Login</b>
                 
              <form id='login' class='input-group-login' action="EmployeeLogin.jsp" method='post'>
                         <input type='text' class='input-field' placeholder="Enter Username" name='empname' required>

@@ -12,7 +12,7 @@
 
 <%
 Class.forName("com.mysql.jdbc.Driver");
-Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
+Connection con = DriverManager.getConnection("jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/userdb","root","rootroot");
 
 String username = request.getParameter("empname");
 String password = request.getParameter("emppass");
@@ -46,7 +46,7 @@ if(count>0)
 	
 
     alert("Username Already Exist");
-	window.location.replace("EmployeeDisplay.html");
+	window.location.replace("EmployeeRegistration.html");
 
    
 </script>
@@ -74,7 +74,7 @@ else{
 
 	<script type="text/javascript">
 	    alert("Success");
-	    window.location.replace("CustomerLogin.html");
+	    window.location.replace("adminview.jsp");
 
 	</script>
 

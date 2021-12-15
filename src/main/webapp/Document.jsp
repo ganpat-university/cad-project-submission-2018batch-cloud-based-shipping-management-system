@@ -7,16 +7,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sprightly Go</title>
 </head>
 <body>
 
 
 <%
-
+String username=session.getAttribute("uname").toString(); 
 
 Class.forName("com.mysql.jdbc.Driver");
-Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
+Connection con = DriverManager.getConnection("jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/userdb","root","rootroot");
 
 String origin = request.getParameter("pincode1");
 String destination = request.getParameter("pincode2");
@@ -32,7 +32,7 @@ String Payment="Cash On Delivery";
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 String date = sdf.format(new Date());
 int num = 0;
-String username=session.getAttribute("uname").toString();
+
 
 String fullname = request.getParameter("fullname");
 String add1 = request.getParameter("add1");
@@ -108,18 +108,9 @@ if (service.equals("Premium"))
 	ptrm.setString(19, dcontact);
 	ptrm.setString(20, Payment);
 
-
-
-
-
-
-	
-
 	
 	ptrm.executeUpdate();
-	session.setAttribute("username", request.getParameter("uname"));
-	RequestDispatcher rd = request.getRequestDispatcher("/docdisplay.jsp");
-	rd.forward(request, response);
+	response.sendRedirect("docdisplay.jsp");
 	  
 	%>
 

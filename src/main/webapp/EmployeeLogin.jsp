@@ -9,7 +9,7 @@
 </head>
 <body>
 <% Class.forName("com.mysql.cj.jdbc.Driver");
-Connection con=DriverManager.getConnection("jdbc:mysql://database-1.cavmoaj89fnk.ap-south-1.rds.amazonaws.com:3306/courierservice","admin","khushi212");
+Connection con=DriverManager.getConnection("jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/userdb","root","rootroot");
 String CustName=request.getParameter("empname");
 String Password=request.getParameter("emppass");
 String sql="Select username, password from employee where username=? and password=?";

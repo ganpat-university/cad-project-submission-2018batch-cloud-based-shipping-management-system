@@ -7,7 +7,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-String id = request.getParameter("productID");
+String id = request.getParameter("customerID");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://myawsab.cql0p9qpgbpg.ap-south-1.rds.amazonaws.com:3306/";
 String database = "userdb";
@@ -28,9 +28,7 @@ ResultSet resultSet = null;
 <title>Sprightly Go</title>
     <link rel="stylesheet" href="Website/Website/css/view.css" >
 <style>
-body {
-  overflow: hidden; /* Hide scrollbars */
-}
+
 table {
   font-family: sans-serif;
   text-decoration: none;
@@ -127,50 +125,52 @@ text-align: middle;
   font-size: 16px;
   
   cursor: pointer;
-}
-.wel
-{
-	color: white;
-	font-style:oblique;
-	font-size:20px;
-}
-</style>
+}</style>
 </head>
 <body>
 <div class="full-page">
-         <div class="navbar">
+        <div class="navbar">
             <div class="cname">
-                <a href="index.html">Sprightly Go</a>
+                <a href='Website/Website/index.html'>Sprightly Go</a>
             </div>
-        
-            <nav>
+         <nav>
                 <ul id='MenuItems'>
-                   
-                    <li><a href='TermandCondition.jsp'>Terms & Conditions</a></li>
-                        <li><a href="Website/Website/index.html">Home</a></li>
-                <li class="wel"><% String username=session.getAttribute("uname").toString(); %><%=username%></li> 
+                	<li><a href="#">Shipment</a>
+                		<ul class="sub1">
+                			<li><a href="ShowDocShipment.jsp">Document Shipment</a></li>
+                			<li><a href="ShwNondocShipment.jsp">Non Document Shipment</a></li>
+                		</ul>
+                	</li>
+                    <li><a href="ShowCustomer.jsp">Customer Details</a></li>
+                    <li><a href="#">Employee</a>
+                   		<ul class="sub">
+                   			<li><a href="showemployee.jsp">Display Employee</a></li>
+                			<li><a href="EmployeeRegistration.html">Add Employee</a></li>
+                			<li><a href="updateemp.jsp">Update Employee</a></li>
+                			<li><a href="empdelete.jsp">Remove Employee</a></li>
+                		</ul>
+                	</li>
+                    <li><a href="Website/Website/index.html">Home</a></li>
+                     <li class="wel"><% String username=session.getAttribute("adminname").toString(); %>
+<%=username%></li>
                 </ul>
             </nav>
         
         </div>
 <center>
-<h1>NonDocument Shipment</h1>
 <table border="1">
-<tr style="background-color: rgb(51,83,130);;color:white;">
-<th>Reference Code</th>
-<th>Amount Paid</th>
-<th>Origin Pincode</th>
-<th>Destination Pincode</th>
-<th>Service Type</th>
-<th>Delivery Time</th>
-<th>Amount</th>
-<th>Status</th>
-<th>Product Name</th>
-<th>Registered Date</th>
-<th>Delivery Date</th>
-<th>Shipment Type</th>
+<tr style="background-color: rgb(51,83,130);color:white;font-style:Serif">
+<th>CustomerID</th>
 <th>Username</th>
-<th></th>
+
+<th>Password</th>
+<th>Customer Name</th>
+<th>Email Address</th>
+<th>City</th>
+<th>Contact No.</th>
+
+
+
 
 
 </tr>
@@ -178,24 +178,18 @@ text-align: middle;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select productID,amountpaid,pincode1,pincode2,servicetype,deliverytime,amount,status,productname,registerdate,deliverydate,shipmenttype,username from nondocument";
+String sql ="select customerID,username,password,customername,email,address,phone from customerdetails ";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr>
-<td><%=resultSet.getString("productID") %></td>
-<td><%=resultSet.getString("amountpaid") %></td>
-<td><%=resultSet.getString("pincode1") %></td>
-<td><%=resultSet.getString("pincode2") %></td>
-<td><%=resultSet.getString("servicetype") %></td>
-<td><%=resultSet.getString("deliverytime") %></td>
-<td><%=resultSet.getString("amount") %></td>
-<td><%=resultSet.getString("status") %></td>
-<td><%=resultSet.getString("productname") %></td>
-<td><%=resultSet.getString("registerdate") %></td>
-<td><%=resultSet.getString("deliverydate") %></td>
-<td><%=resultSet.getString("shipmenttype") %></td>
+<td><%=resultSet.getString("customerID") %></td>
 <td><%=resultSet.getString("username") %></td>
+<td><%=resultSet.getString("password") %></td>
+<td><%=resultSet.getString("customername") %></td>
+<td><%=resultSet.getString("email") %></td>
+<td><%=resultSet.getString("address") %></td>
+<td><%=resultSet.getString("phone") %></td>
 
 
 
@@ -204,7 +198,7 @@ while(resultSet.next()){
 
 
 
-<td><a class="link" href="updatedata.jsp?id=<%=resultSet.getString("productid")%>">Update</a></td>
+
 </tr>
 <%
 }
